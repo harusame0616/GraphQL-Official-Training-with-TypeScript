@@ -1,0 +1,30 @@
+<html>
+  <script>
+    window.addEventListener('load', async () => {
+      var dice = 3;
+      var sides = 7;
+      var query = `query RollDice($dice: Int!, $sides: Int) {
+      rollDice(numDice: $dice, numSides: $sides)
+    }`;
+
+      const result = await fetch('/graphql2', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+          Accept: 'application/json',
+        },
+        body: JSON.stringify({
+          query,
+          variables: { dice, sides },
+        }),
+      });
+
+      document.querySelector('#result').textContent = JSON.stringify(
+        await result.json()
+      );
+    });
+  </script>
+  <body>
+    <div id="result"></div>
+  </body>
+</html>

@@ -1,0 +1,25 @@
+{
+  "dependencies": {
+    "graphql": "^16.6.0",
+    "init": "^0.1.2",
+    "ts-node": "^10.9.1"
+  },
+  "name": "graphql-tutorial",
+  "description": "",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "start": "ts-node server",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/harusame0616/graphql-node-sample.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/harusame0616/graphql-node-sample/issues"
+  },
+  "homepage": "https://github.com/harusame0616/graphql-node-sample#readme"
+}
